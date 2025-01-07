@@ -10,7 +10,7 @@ def desafio1rocketseat():
     print("[5] - Lista de contatos favoritos")
     print("[5] - Deletar um contato")
 
-    opcaoSelecionada = int(input("Digite a opção desejada: "))
-    print(f"Opção selecionada: {opcaoSelecionada}")
+    opcao_selecionada = int(input("Digite a opção desejada: "))
+    print(f"Opção selecionada: {opcao_selecionada}")
 
 desafio1rocketseat()
