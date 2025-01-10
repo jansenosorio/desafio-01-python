@@ -21,6 +21,8 @@ def desafio1rocketseat():
             lista_contatos.append(novo_contato)
         elif opcao_selecionada == 2:
             show_lista_contatos(lista_contatos)
+        elif opcao_selecionada == 3:
+            edit_lista_contato(lista_contatos)
         elif opcao_selecionada == 6:
             break
 
@@ -41,5 +43,23 @@ def show_lista_contatos(lista_contatos):
         print("Nenhum contato cadastrado.")
     else:
         print(lista_contatos)
+
+def edit_lista_contato(lista_contatos):
+    print("Selecione o contato que deseja editar: ")
+
+    for index, contato in enumerate(lista_contatos):
+        print(f"[{index + 1}] - {contato['nome']}")
+
+    index_contato_selecionado = int(input("Digite o número do contato que deseja editar: ")) - 1
+
+    print("Digite os novos dados do usuário:")
+    nome = input("Nome: ")
+    telefone = input("Telefone: ")
+    email = input("Email: ")
+    favorito = input("Favorito (S/N): ")
+    print("Contato editado com sucesso!")
+
+    lista_contatos[index_contato_selecionado] = {'nome': nome, 'telefone': telefone, 'email': email, 'favorito': favorito}
+
 
 desafio1rocketseat()
