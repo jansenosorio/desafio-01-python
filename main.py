@@ -20,7 +20,7 @@ def desafio1rocketseat():
             novo_contato = adicionar_novo_contato()
             lista_contatos.append(novo_contato)
         elif opcao_selecionada == 2:
-            show_lista_contatos(lista_contatos)
+            mostrar_lista_contatos(lista_contatos)
         elif opcao_selecionada == 3:
             edit_lista_contato(lista_contatos)
         elif opcao_selecionada == 6:
@@ -38,7 +38,7 @@ def adicionar_novo_contato():
 
     return {'nome': nome, 'telefone': telefone, 'email': email, 'favorito': favorito}
 
-def show_lista_contatos(lista_contatos):
+def mostrar_lista_contatos(lista_contatos):
     if len(lista_contatos) == 0:
         print("Nenhum contato cadastrado.")
     else:
